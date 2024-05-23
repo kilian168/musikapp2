@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styletext.css">
+        <title>Notes</title>
+    </head>
+    <body>
+        <span id="datetime"></span>
+        <div id="maindiv" class="wrapper">
+            <textarea class="txtarea"></textarea>
+            <audio id="audioPlayer" controls></audio>
+        </div>
+        <div>
+            <button class="btn" id=record type="button">REC</button>
+            <button class="btn" type="button">IMG</button>
+            <button class="btn" type="button" onclick="calendar()">CALENDAR</button>
+            <button class="btn" type="button" onclick="plus()">+</button>
+        </div>
+    </body>
+    <script src="js/textarea.js"></script>
+    <script src="js/audio.js"></script>
+</html>

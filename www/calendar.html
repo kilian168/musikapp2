@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/dycalendar.css"/>
+    <link rel="stylesheet" href="css/calendar.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+
+    <body>
+        <header class="header">
+            <div class="background-nav">
+               <nav class="nav">
+                <a href="" class="navlogo">LCApp</a>
+                <div class="nav_items">
+                  <button onclick="home()" type="button"class="nav_link">Home</button>
+                  <button onclick="stimmen()" type="button" class="nav_link">Stimmen</button>
+                  <button onclick="metronom()" type="button" class="nav_link">Metronom</button>
+                  <button onclick="calendar()" type="button" class="nav_link">Kalender</button> 
+                </div>
+            </nav> 
+            </div>
+        </header>
+            <div>
+                <section>
+                    <div class="box">
+                        <div class="container">
+                            <div id="dycalendar"></div>
+                        </div>
+                    </div>
+                </section> 
+            </div>
+        
+        
+    
+    <script src="js/dycalendar.js">
+    </script>
+    <script>
+        dycalendar.draw({
+            target: '#dycalendar', 
+            type: 'month',
+            highlighttargetdate: true, 
+            prevnextbutton: 'show'
+        })
+    </script>
+    <script src="js/main.js">
+    </script>
+    <script src="js/calendar.js">
+    </script>
+    </body>
+    </html>
