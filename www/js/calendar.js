@@ -1,3 +1,7 @@
+
+
+
+
 function editor(year, month, day) {
     const fs = require("fs");
     path = "db/"+year+"/"+month+"/"+day

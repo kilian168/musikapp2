@@ -1,23 +1,32 @@
 let recordedChunks = [];
 
+<<<<<<< HEAD:www/js/audio.js
 const counter = 0;
 
 const recBtn = document.getElementById('record');
+=======
+const count = 0;
+>>>>>>> 29a723f5f9a01910486348a113befd17d3dabdf6:www/js/editor.js
 
-let can = false;
+const recBtn = document.getElementById('record' + toString(count));
+
+let cannot = false;
 let is = false;
 
 /*
 const playBtn = document.getElementById('play');
 */
-const audioPlayer = document.getElementById('audioPlayer');
+const audioPlayer = document.getElementById('audioPlayer' + toString(count));
 
 recBtn.addEventListener('click', toggleRec);
 
 function toggleRec() {
-    if(!can) return;
+    if(!cannot) return;
     is = !is;
     if(is) {
+        audio1 = document.createElement("audio");
+        audio1.setAttribute("id", "audioPlayer" + toString(count));
+        audio1.setAttribute("controls", "");
         recorder.start();
     } else {
         recorder.stop();
@@ -45,12 +54,12 @@ function setStream(stream) {
         recordedChunks.push(e.data);
     }
     recorder.onstop = e => {
-        const blob = new Blob(recordedChunks, { type: "audio/wav" });
+        const blob = new Blob(recordedChunks, { type: "audio/mp3" });
         recordedChunks = [];
         const audioURL = window.URL.createObjectURL(blob);
         audioPlayer.src = audioURL;
     }
-    can = true;
+    cannot = true;
 }
 
 
@@ -65,7 +74,7 @@ function plus() {
     audio = document.getElementById("audioPlayer");
     audio.removeAttribute("id");
     audio1 = document.createElement("audio");
-    audio1.setAttribute("id", "audioPlayer");
+    audio1.setAttribute("id", "audioPlayer" + toString(count));
     audio1.setAttribute("controls", "");
     wrap.appendChild(text);
     wrap.appendChild(audio1);
