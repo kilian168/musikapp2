@@ -1,5 +1,7 @@
 let recordedChunks = [];
 
+const counter = 0;
+
 const recBtn = document.getElementById('record');
 
 let can = false;
