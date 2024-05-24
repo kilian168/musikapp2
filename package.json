@@ -5,10 +5,7 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node www/js/server.js",
-=======
->>>>>>> 29a723f5f9a01910486348a113befd17d3dabdf6
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,7 +14,6 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-<<<<<<< HEAD
     "cordova-android": "^12.0.1",
     "cordova-ios": "^7.1.0"
   },
@@ -38,13 +34,3 @@
     "nodemon": "^3.1.0"
   }
 }
-=======
-    "cordova-android": "^13.0.0"
-  },
-  "cordova": {
-    "platforms": [
-      "android"
-    ]
-  }
-}
->>>>>>> 29a723f5f9a01910486348a113befd17d3dabdf6
