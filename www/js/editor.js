@@ -1,12 +1,6 @@
 let recordedChunks = [];
 
-<<<<<<< HEAD:www/js/audio.js
-const counter = 0;
-
-const recBtn = document.getElementById('record');
-=======
 const count = 0;
->>>>>>> 29a723f5f9a01910486348a113befd17d3dabdf6:www/js/editor.js
 
 const recBtn = document.getElementById('record' + toString(count));
 
