@@ -20,3 +20,6 @@ function calendar() {
 function home() {
     window.location = "app.html";
 }
+function login() {
+    document.getElementsByClassName("formdiv").style.display = "block";
+}
