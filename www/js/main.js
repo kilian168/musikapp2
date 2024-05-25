@@ -21,5 +21,8 @@ function home() {
     window.location = "app.html";
 }
 function login() {
-    document.getElementsByClassName("formdiv").style.display = "block";
+    document.getElementById('forms').style.display='block';
+}
+function closelogin() {
+    document.getElementById('forms').style.display='none';
 }
