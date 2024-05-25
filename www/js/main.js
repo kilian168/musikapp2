@@ -20,3 +20,9 @@ function calendar() {
 function home() {
     window.location = "app.html";
 }
+function login() {
+    document.getElementById('forms').style.display='block';
+}
+function closelogin() {
+    document.getElementById('forms').style.display='none';
+}

@@ -38,6 +38,11 @@
     background-color: rgb(50, 50, 200);
     margin: 0;
 }
+
+.formdiv {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -54,7 +59,7 @@ a {
 }
 .nav_items {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     justify-content: space-evenly;
     font-size: 90%;
     padding-top: 5%;
