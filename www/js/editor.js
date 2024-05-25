@@ -1,6 +1,13 @@
-let recordedChunks = [];
+const { text } = require("express");
 
-const count = 0;
+let recordedChunks = [];
+let year, month, day;
+let dir;
+
+
+var factory = window.indexedDB.open('storage', 5);
+
+var count;
 
 const recBtn = document.getElementById('record' + toString(count));
 
@@ -12,7 +19,34 @@ const playBtn = document.getElementById('play');
 */
 const audioPlayer = document.getElementById('audioPlayer' + toString(count));
 
+window.resolveLocalFileSystemURL(cordova.file.dataDirectory, 
+    function (data) {
+    console.log("got main dir", data);
+    dir = data;
+    }, 
+    function (error) {
+    console.log("Error accessing data directory:", error);
+    }
+);
+
 recBtn.addEventListener('click', toggleRec);
+
+function editor(year, month, day) {
+    this.year = year;
+    this.month = month;
+    this.day = day;
+    window.location = 'editor.html';
+    count = 0;
+}
+
+function buildPage() {
+    var filesdir = dir + '/' + year + '/' + month + '/' + day;
+    var textarea = document.createElement('textarea');
+    textarea.setAttribute('id', `textarea${count}`);
+    filesdir.getFile(`${count}.txt`, text);
+    textarea.value = text;
+    count++;
+}
 
 function toggleRec() {
     if(!cannot) return;
@@ -72,4 +106,8 @@ function plus() {
     audio1.setAttribute("controls", "");
     wrap.appendChild(text);
     wrap.appendChild(audio1);
+}
+function plusinit() {
+    wrap = document.getElementById("maindiv");
+    text = document.getElementById("textarea" + toString(count));
 }

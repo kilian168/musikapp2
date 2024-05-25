@@ -1,7 +1,4 @@
 
-
-
-
 function editor(year, month, day) {
     const fs = require("fs");
     path = "db/"+year+"/"+month+"/"+day
@@ -13,7 +10,7 @@ function editor(year, month, day) {
         }
         fs.copyFile("editor.html", path);
     }
-    window.location.replace(path);
+    window.location = path;
 }
 
 function editornormal() {

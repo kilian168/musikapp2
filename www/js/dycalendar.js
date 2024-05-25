@@ -92,8 +92,8 @@
             btn.type = "button";
             btn.className = "btn";
             btn.value = null;
-            //btn.setAttribute("onclick", "editor("+data.year+","+data.month+","+count+")");
-            btn.setAttribute("onclick", "editornormal()");
+            btn.setAttribute("onclick", "editor("+data.year+","+data.month+","+count+")");
+            //btn.setAttribute("onclick", "editornormal()");
             td.appendChild(btn);
 
             if (data.today.date === count && data.today.monthIndex === data.monthIndex && option.highlighttoday === true) {
@@ -126,8 +126,8 @@
                 btn.type = "button";
                 btn.className = "btn";
                 btn.value = null;
-                //btn.setAttribute("onclick", "editor("+data.year+","+data.month+","+count+")");
-                btn.setAttribute("onclick", "editornormal()");
+                btn.setAttribute("onclick", "editor("+data.year+","+data.month+","+count+")");
+                //btn.setAttribute("onclick", "editornormal()");
                 td.appendChild(btn);
 
                 if (data.today.date === count && data.today.monthIndex === data.monthIndex && option.highlighttoday === true) {
