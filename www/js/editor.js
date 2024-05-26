@@ -3,9 +3,6 @@ let recordedChunks = [];
 let year, month, day;
 let dir;
 
-
-var factory = window.indexedDB.open('storage', 5);
-
 var count;
 
 let parent = document.getElementById("maindiv");
@@ -28,11 +25,11 @@ function editor(year, month, day) {
     this.day = day;
     window.location = 'editor.html';
     count = 0;
-    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, 
+    window.resolveLocalFileSystemURL(cordova.file.dataDirectory,
         function (data) {
         console.log("got main dir", data);
         dir = data;
-        }, 
+        },
         function (error) {
         console.log("Error accessing data directory:", error);
         }
@@ -55,6 +52,7 @@ function buildPage() {
     textarea.value = text;
     parent.appendChild(textarea);
     count++;
+    if(textarea.value == null) return;      // return for text & audio & pic & video == null
     buildPage();
 }
 
@@ -115,7 +113,7 @@ function saveChange() {
 
 function calendar() {
     saveChange();
-    window.location.replace("calendar.html");
+    window.location = "calendar.html";
 }
 
 function plus() {
