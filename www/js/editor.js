@@ -20,6 +20,9 @@ const audioPlayer = document.getElementById('audioPlayer' + toString(count));
 recBtn.addEventListener('click', toggleRec);
 
 function editor(year, month, day) {
+    console.log(year);
+    console.log(month);
+    console.log(day);
     this.year = year;
     this.month = month;
     this.day = day;
@@ -112,7 +115,7 @@ function saveChange() {
 }
 
 function calendar() {
-    saveChange();
+    //saveChange();
     window.location = "calendar.html";
 }
 
